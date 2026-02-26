@@ -1,9 +1,10 @@
 // Updated LoadTree function with proper std::string handling
-void LoadTree(const std::string& filePath) {
-    // Improved string handling code here...
-    std::ifstream inputFile(filePath);
-    if (!inputFile.is_open()) {
-        throw std::runtime_error("Failed to open file: " + filePath);
+#include <string>
+
+void LoadTree(std::string treeData) {
+    // Example code that handles std::string properly
+    if (treeData.empty()) {
+        throw std::invalid_argument("Tree data cannot be empty");
     }
-    // More code for handling tree loading...
+    // Process tree data here...
 }
